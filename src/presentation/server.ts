@@ -1,3 +1,4 @@
+import bodyParser from 'body-parser';
 import express, { Router } from 'express'
 
 interface Options {
@@ -18,8 +19,8 @@ export class Server{
     async start(){
 
         // Middlewares
-        this.app.use(express.json());
-        this.app.use(express.urlencoded({ extended: true })); // x-www-form-urlencoded
+        this.app.use(bodyParser.json());
+        this.app.use(bodyParser.urlencoded({ extended: true })); // x-www-form-urlencoded
 
         // use defined routes
         this.app.use(this.routes);
