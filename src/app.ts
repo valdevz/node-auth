@@ -1,4 +1,6 @@
+import { envs } from "./config";
 import { Server } from "./presentation/server";
+import { AppRoutes } from "./presentation/routes"; // Adjust the import path as necessary
 
 (()=> {
 main();
@@ -10,6 +12,7 @@ async function main() {
     // todo: inicio de nuestro server
     console.log('main');
     new Server({
-        port: 3000,
+        port: envs.PORT,
+        routes: AppRoutes.routes
     }).start();
 }
