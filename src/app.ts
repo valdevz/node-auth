@@ -14,7 +14,7 @@ async function main() {
         mongoUrl: envs.MONGO_URL
     });
 
-    // todo: inicio de nuestro server
+    // todo: server start
     new Server({
         port: envs.PORT,
         routes: AppRoutes.routes
