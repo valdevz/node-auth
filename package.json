@@ -20,11 +20,13 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.8",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "env-var": "^7.5.0",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.6"
   }
 }
