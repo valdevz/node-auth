@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
-const TOKEN_KEY: string = 'your-secret-key';
+import { envs } from './envs';
+const TOKEN_KEY: string = envs.JWT_KEY;
 
 export class JwtAdapter {
     static async generateToken( payload: Object, duration: number = 1800): Promise<string|null> {
